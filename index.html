@@ -1,1 +1,48 @@
-index.html
+{
+  "id": "did:web:did.neom.com",
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    {
+      "@base": "did:web:did.neom.com"
+    }
+  ],
+  "service": [
+    {
+      "id": "#linkeddomains",
+      "type": "LinkedDomains",
+      "serviceEndpoint": {
+        "origins": [
+          "https://did.neom.com/"
+        ]
+      }
+    },
+    {
+      "id": "#hub",
+      "type": "IdentityHub",
+      "serviceEndpoint": {
+        "instances": [
+          "https://hub.did.msidentity.com/v1.0/8288fdf2-0e8b-47a6-abbb-004395ecab56"
+        ]
+      }
+    }
+  ],
+  "verificationMethod": [
+    {
+      "id": "#bf7710264ead4b51add092fd782dbd12vcSigningKey-e0ae8",
+      "controller": "did:web:did.neom.com",
+      "type": "JsonWebKey2020",
+      "publicKeyJwk": {
+        "crv": "P-256",
+        "kty": "EC",
+        "x": "EztjfVyhKCso-p_QNG0lQKH26bWlGSSVgYUJoeJQEkk",
+        "y": "kzRop_2Im3r0NtUnALs2aL9b3E9aG1-aLYcJANCf6DY"
+      }
+    }
+  ],
+  "authentication": [
+    "#bf7710264ead4b51add092fd782dbd12vcSigningKey-e0ae8"
+  ],
+  "assertionMethod": [
+    "#bf7710264ead4b51add092fd782dbd12vcSigningKey-e0ae8"
+  ]
+}
